@@ -1,11 +1,11 @@
-About include-what-you-use
-==========================
+About include-what-you-use-feedstock
+====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/include-what-you-use-feedstock/blob/main/LICENSE.txt)
 
 Home: https://include-what-you-use.org
 
 Package license: NCSA
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/include-what-you-use-feedstock/blob/main/LICENSE.txt)
 
 Summary: A tool for use with clang to analyze #includes in C and C++ source files
 
@@ -41,6 +41,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16079&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/include-what-you-use-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16079&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/include-what-you-use-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -173,4 +180,5 @@ Feedstock Maintainers
 =====================
 
 * [@xmnlab](https://github.com/xmnlab/)
+* [@xylar](https://github.com/xylar/)
 

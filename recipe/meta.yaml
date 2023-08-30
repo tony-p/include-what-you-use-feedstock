@@ -1,6 +1,6 @@
 {% set name = "include-what-you-use" %}
-{% set version = "0.19" %}
-{% set llvm_version = "15.*" %}
+{% set version = "0.20" %}
+{% set llvm_version = "16.*" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 169b7af2f66196e729f694aed539ec964d874eb7959614b5828238fe49747980
+  sha256: 4fe4bd5581ee60bb2bcf1bf40f087a8c5b090d943d0376233638f30f29af0e2e
 
 build:
   number: 0
-  skip: true  # [not linux]
+  skip: true  # [win]
 
 requirements:
   build:
@@ -49,3 +49,4 @@ about:
 extra:
   recipe-maintainers:
     - xmnlab
+    - xylar
