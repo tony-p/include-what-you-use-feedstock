@@ -1,19 +1,22 @@
-mkdir -p build
+mkdir build
 cd build
 
 cmake^
-  -G "Unix Makefiles"^
+  -G "NMake Makefiles"^
   ${CMAKE_ARGS}^
   -DCMAKE_PREFIX_PATH=${PREFIX}^
   -DCMAKE_BUILD_TYPE=release^
   -DCMAKE_C_COMPILER=${CC}^
   -DCMAKE_CXX_COMPILER=${CXX}^
   ..
+if errorlevel 1 exit /b 1
 
 cmake --build .
+if errorlevel 1 exit /b 1
 cmake --install . -v
+if errorlevel 1 exit /b 1
 
-ctest 
+ctest^ 
   --output-on-failure ^
   --exclude-regex "^
 ^cxx.test_badinc$^
@@ -36,4 +39,4 @@ ctest
 |^cxx.test_stl_container_provides_allocator$^
 |^cxx.test_typeid$^
 |^cxx.test_uses_printf$"
-
+if errorlevel 1 exit /b 1

@@ -18,14 +18,16 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - python
     - make
+    - python
   host:
     - clangdev {{ llvm_version }}
     - llvmdev {{ llvm_version }}
     - llvm {{ llvm_version }}
     - libclang-cpp {{ llvm_version }}
     - lld {{ llvm_version }}
+  run:
+    - python  # [win]
 test:
   commands:
     - {{ name }} --version
